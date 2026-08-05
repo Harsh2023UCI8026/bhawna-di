@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --background: #FFF7FA;
+  --foreground: #4A2C33;
+}
+
+@theme inline {
+  --color-primary-pink: #D6336C;
+  --color-primary-light: #F06292;
+  --color-brand-bg: #FFF7FA;
+  --color-brand-light: #FDE2EC;
+  --color-accent-magenta: #C2185B;
+  --color-accent-gold: #E8B4BC;
+  --color-charcoal: #4A2C33;
+  --color-success-green: #8BC34A;
+  
+  --font-quicksand: 'Quicksand', sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar for cute aesthetics */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF7FA;
+}
+::-webkit-scrollbar-thumb {
+  background: #FDE2EC;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F06292;
+}
