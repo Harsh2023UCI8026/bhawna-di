@@ -192,8 +192,9 @@ export default function Navbar() {
 
             {/* Wishlist */}
             <Link
-              href="/#trending"
+              href="/wishlist"
               className="p-1.5 sm:p-2 rounded-full hover:bg-[#FFF7FA] text-[#4A2C33]/70 hover:text-[#D6336C] relative transition-colors cursor-pointer"
+              title="My Wishlist"
             >
               <Heart className="w-5 h-5 sm:w-5.5 sm:h-5.5" />
               {wishlistCount > 0 && (

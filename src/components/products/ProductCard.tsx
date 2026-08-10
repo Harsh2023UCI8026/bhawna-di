@@ -69,27 +69,31 @@ export default function ProductCard({ product }: ProductCardProps) {
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
       className="group relative bg-white border border-[#FDE2EC] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col h-full"
     >
-      {/* Product Image Link */}
-      <Link href={`/product/${product.id}`} className="relative block aspect-square overflow-hidden bg-[#FFF7FA] shrink-0">
-        <img
-          src={product.images[0]}
-          alt={product.name}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-          loading="lazy"
-        />
+      {/* Product Image Container */}
+      <div className="relative aspect-square overflow-hidden bg-[#FFF7FA] shrink-0">
+        <Link href={`/product/${product.id}`} className="block w-full h-full">
+          <img
+            src={product.images[0]}
+            alt={product.name}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            loading="lazy"
+          />
+        </Link>
 
         {/* Discount Badge */}
         {discount > 0 && (
-          <span className="absolute top-3 left-3 bg-[#D6336C] text-white font-quicksand font-bold text-[10px] px-2.5 py-1 rounded-full shadow-sm">
+          <span className="absolute top-3 left-3 bg-[#D6336C] text-white font-quicksand font-bold text-[10px] px-2.5 py-1 rounded-full shadow-sm pointer-events-none">
             {discount}% OFF
           </span>
         )}
 
         {/* Heart / Wishlist Button */}
-        <div className="absolute top-3 right-3 z-10">
+        <div className="absolute top-3 right-3 z-20">
           <button
+            type="button"
             onClick={handleLikeClick}
-            className="p-2 bg-white/80 hover:bg-white border border-[#FDE2EC] rounded-full shadow-sm text-[#4A2C33]/60 hover:text-[#D6336C] transition-colors relative cursor-pointer"
+            aria-label={isLiked ? "Unlike item" : "Like item"}
+            className="p-2 bg-white/90 hover:bg-white border border-[#FDE2EC] rounded-full shadow-sm text-[#4A2C33]/60 hover:text-[#D6336C] transition-colors relative cursor-pointer active:scale-95"
           >
             <motion.div
               animate={isLiked ? { scale: [1, 1.3, 1] } : {}}
@@ -121,7 +125,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             </AnimatePresence>
           </button>
         </div>
-      </Link>
+      </div>
 
       {/* Info Body */}
       <div className="p-4 flex flex-col flex-1">
