@@ -262,22 +262,51 @@ export default function Navbar() {
         {/* Mobile Search Bar Expansion */}
         <div className="px-4 pb-3 block md:hidden">
           <form onSubmit={handleSearchSubmit} className="relative">
-            <input
-              type="text"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search bouquets, hampers, decor..."
-              className="w-full pl-9 pr-8 py-1.5 bg-[#FFF7FA] border border-[#FDE2EC] rounded-full text-xs font-poppins text-[#4A2C33]"
-            />
-            <Search className="w-3.5 h-3.5 text-[#4A2C33]/50 absolute left-3 top-1/2 -translate-y-1/2" />
-            {searchQuery && (
-              <button
-                type="button"
-                onClick={() => setSearchQuery("")}
-                className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[#4A2C33]/50"
-              >
-                <X className="w-3.5 h-3.5" />
-              </button>
+            <div className="relative">
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                onFocus={() => searchQuery.trim() && setShowSuggestions(true)}
+                placeholder="Search bouquets, hampers, decor..."
+                className="w-full pl-9 pr-8 py-1.5 bg-[#FFF7FA] border border-[#FDE2EC] rounded-full text-xs font-poppins text-[#4A2C33] focus:outline-none focus:ring-2 focus:ring-[#F06292]/30"
+              />
+              <Search className="w-3.5 h-3.5 text-[#4A2C33]/50 absolute left-3 top-1/2 -translate-y-1/2" />
+              {searchQuery && (
+                <button
+                  type="button"
+                  onClick={() => setSearchQuery("")}
+                  className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[#4A2C33]/50 p-1"
+                >
+                  <X className="w-3.5 h-3.5" />
+                </button>
+              )}
+            </div>
+
+            {/* Mobile Auto-complete Suggestions Dropdown */}
+            {showSuggestions && (
+              <div className="absolute left-0 right-0 mt-2 bg-white border border-[#FDE2EC] rounded-2xl shadow-lg overflow-hidden z-50">
+                {suggestions.length > 0 ? (
+                  suggestions.map((p) => (
+                    <button
+                      key={p.id}
+                      type="button"
+                      onClick={() => handleSuggestionClick(p.id)}
+                      className="w-full px-4 py-2.5 text-left text-xs font-poppins text-[#4A2C33] hover:bg-[#FFF7FA] border-b border-[#FFF7FA] last:border-b-0 flex items-center gap-3 cursor-pointer"
+                    >
+                      <img src={p.images[0]} alt={p.name} className="w-8 h-8 rounded-lg object-cover" />
+                      <div>
+                        <p className="font-medium truncate">{p.name}</p>
+                        <p className="text-xs text-[#D6336C] font-semibold">₹{p.price}</p>
+                      </div>
+                    </button>
+                  ))
+                ) : (
+                  <div className="px-4 py-3 text-center text-xs font-poppins text-[#4A2C33]/50">
+                    No exact match. Press Enter to search all tags 🌸
+                  </div>
+                )}
+              </div>
             )}
           </form>
         </div>

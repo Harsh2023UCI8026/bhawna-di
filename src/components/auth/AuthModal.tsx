@@ -231,26 +231,26 @@ export default function AuthModal({ isOpen, onClose, initialTab = "login" }: Aut
   const strength = getPasswordStrength();
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/50 backdrop-blur-sm overflow-y-auto">
       <motion.div
         initial={{ opacity: 0, scale: 0.95, y: 20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.95, y: 20 }}
         transition={{ type: "spring", duration: 0.5 }}
-        className="w-full max-w-md bg-white rounded-3xl border border-[#FDE2EC] shadow-xl overflow-hidden relative"
+        className="w-full max-w-md bg-white rounded-3xl border border-[#FDE2EC] shadow-2xl overflow-hidden relative my-auto max-h-[90vh] flex flex-col"
       >
         {/* Header decoration */}
-        <div className="h-2 bg-gradient-to-r from-[#D6336C] via-[#F06292] to-[#D6336C]" />
+        <div className="h-2 bg-gradient-to-r from-[#D6336C] via-[#F06292] to-[#D6336C] shrink-0" />
 
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 p-1.5 rounded-full text-[#4A2C33]/60 hover:text-[#D6336C] hover:bg-[#FFF7FA] transition-colors cursor-pointer"
+          className="absolute top-4 right-4 p-1.5 rounded-full text-[#4A2C33]/60 hover:text-[#D6336C] hover:bg-[#FFF7FA] transition-colors cursor-pointer z-10"
         >
           <X className="w-5 h-5" />
         </button>
 
-        <div className="p-6 md:p-8">
+        <div className="p-5 sm:p-6 md:p-8 overflow-y-auto flex-1">
           {/* Logo / Wordmark */}
           <div className="text-center mb-6">
             <h2 className="text-2xl font-quicksand font-bold text-[#D6336C] flex items-center justify-center gap-1.5">
