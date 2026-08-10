@@ -33,7 +33,7 @@ export default function CustomOrderPage() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
 
@@ -41,8 +41,7 @@ export default function CustomOrderPage() {
     if (!phone.trim()) return setError("Please enter your contact number");
     if (!description.trim()) return setError("Please describe what you want made");
 
-    // Add to localStorage
-    addCustomOrder({
+    const orderPayload = {
       name,
       phone,
       email: email || undefined,
@@ -50,7 +49,21 @@ export default function CustomOrderPage() {
       image: base64Image,
       budget: budget || undefined,
       deliveryDate: deliveryDate || undefined
-    });
+    };
+
+    // Add to localStorage
+    addCustomOrder(orderPayload);
+
+    // Send email notification via Resend API
+    try {
+      await fetch("/api/custom-order", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(orderPayload)
+      });
+    } catch (err) {
+      console.error("Failed to send Resend email:", err);
+    }
 
     setIsSubmitted(true);
     

@@ -45,7 +45,7 @@ export default function CheckoutPage() {
     setTimeout(() => setCopiedUpi(false), 2000);
   };
 
-  const handlePlaceOrder = (e: React.FormEvent) => {
+  const handlePlaceOrder = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
 
@@ -55,6 +55,30 @@ export default function CheckoutPage() {
     if (!state.trim()) return setError("Please enter your state");
     if (!pincode.trim()) return setError("Please enter your pincode");
     if (!phone.trim()) return setError("Please enter your phone number");
+
+    const checkoutPayload = {
+      name,
+      phone,
+      address,
+      city,
+      state,
+      pincode,
+      landmark,
+      paymentMethod,
+      items: cartItems,
+      totalAmount: grandTotal
+    };
+
+    // Send email notification via Resend API
+    try {
+      await fetch("/api/checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(checkoutPayload)
+      });
+    } catch (err) {
+      console.error("Failed to send Resend checkout email:", err);
+    }
 
     // Success actions
     setIsSuccess(true);
