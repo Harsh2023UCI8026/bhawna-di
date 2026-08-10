@@ -109,19 +109,19 @@ export default function Navbar() {
   return (
     <>
       <header className="sticky top-0 z-40 w-full bg-white/80 border-b border-[#FDE2EC] backdrop-blur-md">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 h-16 flex items-center justify-between gap-1 sm:gap-4 overflow-hidden w-full">
           
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 shrink-0 group">
+          <Link href="/" className="flex items-center gap-1.5 shrink-0 group min-w-0">
             <img
               src="/photo.jpeg"
               alt="its.kirkiri"
-              className="w-8 h-8 rounded-full object-cover border border-[#F06292]/50 group-hover:scale-105 transition-transform"
+              className="w-7 h-7 sm:w-8 sm:h-8 rounded-full object-cover border border-[#F06292]/50 group-hover:scale-105 transition-transform"
             />
-            <span className="font-quicksand font-bold text-xl md:text-2xl text-[#D6336C] tracking-tight group-hover:scale-[1.02] transition-transform">
+            <span className="font-quicksand font-bold text-lg sm:text-xl md:text-2xl text-[#D6336C] tracking-tight group-hover:scale-[1.02] transition-transform truncate">
               its.kirkiri
             </span>
-            <span className="text-pink-500 animate-pulse text-base">💕</span>
+            <span className="text-pink-500 animate-pulse text-sm sm:text-base">💕</span>
           </Link>
 
           {/* Search Bar */}
@@ -179,24 +179,25 @@ export default function Navbar() {
           </form>
 
           {/* Right Navigation & Icons */}
-          <nav className="flex items-center gap-1.5 md:gap-3 shrink-0">
+          <nav className="flex items-center gap-1 sm:gap-2 md:gap-3 shrink-0">
             {/* Custom Orders Link */}
             <Link
               href="/custom-order"
-              className="px-3.5 py-1.5 text-xs font-bold font-quicksand text-[#D6336C] bg-[#FFF7FA] border border-[#FDE2EC] rounded-full hover:bg-[#FDE2EC] transition-all flex items-center gap-1 cursor-pointer"
+              className="px-2.5 sm:px-3.5 py-1 sm:py-1.5 text-[11px] sm:text-xs font-bold font-quicksand text-[#D6336C] bg-[#FFF7FA] border border-[#FDE2EC] rounded-full hover:bg-[#FDE2EC] transition-all flex items-center gap-1 cursor-pointer"
             >
               <Sparkles className="w-3.5 h-3.5" />
-              <span>Custom Order</span>
+              <span className="hidden sm:inline">Custom Order</span>
+              <span className="sm:hidden">Custom</span>
             </Link>
 
             {/* Wishlist */}
             <Link
               href="/#trending"
-              className="p-2 rounded-full hover:bg-[#FFF7FA] text-[#4A2C33]/70 hover:text-[#D6336C] relative transition-colors cursor-pointer"
+              className="p-1.5 sm:p-2 rounded-full hover:bg-[#FFF7FA] text-[#4A2C33]/70 hover:text-[#D6336C] relative transition-colors cursor-pointer"
             >
-              <Heart className="w-5.5 h-5.5" />
+              <Heart className="w-5 h-5 sm:w-5.5 sm:h-5.5" />
               {wishlistCount > 0 && (
-                <span className="absolute top-1.5 right-1.5 min-w-4 h-4 px-1 rounded-full bg-[#D6336C] text-[9px] font-bold text-white flex items-center justify-center scale-95">
+                <span className="absolute top-1 right-1 min-w-4 h-4 px-1 rounded-full bg-[#D6336C] text-[9px] font-bold text-white flex items-center justify-center scale-95">
                   {wishlistCount}
                 </span>
               )}
@@ -205,11 +206,11 @@ export default function Navbar() {
             {/* Shopping Cart */}
             <Link
               href="/cart"
-              className="p-2 rounded-full hover:bg-[#FFF7FA] text-[#4A2C33]/70 hover:text-[#D6336C] relative transition-colors cursor-pointer"
+              className="p-1.5 sm:p-2 rounded-full hover:bg-[#FFF7FA] text-[#4A2C33]/70 hover:text-[#D6336C] relative transition-colors cursor-pointer"
             >
-              <ShoppingBag className="w-5.5 h-5.5" />
+              <ShoppingBag className="w-5 h-5 sm:w-5.5 sm:h-5.5" />
               {cartCount > 0 && (
-                <span className="absolute top-1.5 right-1.5 min-w-4 h-4 px-1 rounded-full bg-[#D6336C] text-[9px] font-bold text-white flex items-center justify-center scale-95">
+                <span className="absolute top-1 right-1 min-w-4 h-4 px-1 rounded-full bg-[#D6336C] text-[9px] font-bold text-white flex items-center justify-center scale-95">
                   {cartCount}
                 </span>
               )}

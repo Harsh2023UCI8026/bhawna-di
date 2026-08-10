@@ -20,11 +20,13 @@
   --font-poppins: 'Poppins', sans-serif;
 }
 
-body {
+html, body {
   background: var(--background);
   color: var(--foreground);
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
 }
 
 /* Custom scrollbar for cute aesthetics */

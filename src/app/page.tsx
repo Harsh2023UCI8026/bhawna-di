@@ -101,12 +101,12 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
-              className="mt-5 p-5 md:p-6 bg-white/80 backdrop-blur-sm border border-[#FDE2EC] rounded-3xl shadow-sm max-w-lg w-full text-center space-y-2 font-poppins text-xs sm:text-sm text-[#4A2C33]"
+              className="mt-5 p-4 sm:p-5 md:p-6 bg-white/80 backdrop-blur-sm border border-[#FDE2EC] rounded-3xl shadow-sm max-w-lg w-full text-center space-y-2 font-poppins text-xs sm:text-sm text-[#4A2C33] overflow-hidden"
             >
               <p className="font-semibold text-[#D6336C]">Add a little KIRKIRI in your life 💖</p>
               <p className="text-[#4A2C33]/80">Mom & daughter behind the magic🪄</p>
               
-              <div className="flex items-center justify-center gap-3 pt-1">
+              <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-3 pt-1">
                 <a
                   href="https://instagram.com/mamta.t_"
                   target="_blank"
