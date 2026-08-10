@@ -31,26 +31,31 @@ export default function Footer() {
           
           {/* Logo & Founder Note */}
           <div className="md:col-span-2 space-y-4">
-            <Link href="/" className="flex items-center gap-1">
+            <Link href="/" className="flex items-center gap-1.5">
+              <img
+                src="/photo.jpeg"
+                alt="its.kirkiri"
+                className="w-6 h-6 rounded-full object-cover border border-[#F06292]/50"
+              />
               <span className="font-quicksand font-bold text-xl text-[#D6336C]">
-                sakaar.art
+                its.kirkiri
               </span>
               <span className="text-pink-500 text-sm">💕</span>
             </Link>
             
             <p className="text-xs md:text-sm font-poppins text-[#4A2C33]/80 leading-relaxed max-w-sm">
-              &quot;Hi, I&apos;m Bhawna Jha 💕 I put so much love and effort into every piece on sakaar.art — if you enjoyed shopping here, please show us some love and support!&quot;
+              &quot;Hi, I&apos;m Kirtika 💕 I put so much love and effort into every piece on its.kirkiri — if you enjoyed shopping here, please show us some love and support!&quot;
             </p>
 
             <div className="flex items-center gap-4 text-xs font-poppins text-[#4A2C33]/70 pt-2">
               <a
-                href="https://instagram.com/sakaar.art"
+                href="https://instagram.com/its.kirkiri"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-1.5 hover:text-[#D6336C] transition-colors"
               >
                 <InstagramIcon className="w-4 h-4 text-[#D6336C]" />
-                <span>@sakaar.art</span>
+                <span>@its.kirkiri</span>
               </a>
               <a
                 href="tel:8130422575"
@@ -99,7 +104,7 @@ export default function Footer() {
             </h3>
             <div className="space-y-2 text-xs font-poppins text-[#4A2C33]/70">
               <p>
-                <span className="font-semibold">Owner:</span> Bhawna Jha
+                <span className="font-semibold">Owner:</span> Kirtika
               </p>
               <p>
                 <span className="font-semibold">Helpline:</span> 8130422575
@@ -121,7 +126,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-[#FDE2EC] mt-8 pt-6 text-center text-[10px] font-poppins text-[#4A2C33]/50">
-          <p>© {new Date().getFullYear()} sakaar.art. Made with love and pipe-cleaners 🌸</p>
+          <p>© {new Date().getFullYear()} its.kirkiri. Made with love and pipe-cleaners 🌸</p>
         </div>
       </div>
     </footer>

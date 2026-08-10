@@ -112,11 +112,16 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
           
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-1.5 shrink-0 group">
-            <span className="font-quicksand font-bold text-2xl text-[#D6336C] tracking-tight group-hover:scale-[1.02] transition-transform">
-              sakaar.art
+          <Link href="/" className="flex items-center gap-2 shrink-0 group">
+            <img
+              src="/photo.jpeg"
+              alt="its.kirkiri"
+              className="w-8 h-8 rounded-full object-cover border border-[#F06292]/50 group-hover:scale-105 transition-transform"
+            />
+            <span className="font-quicksand font-bold text-xl md:text-2xl text-[#D6336C] tracking-tight group-hover:scale-[1.02] transition-transform">
+              its.kirkiri
             </span>
-            <span className="text-pink-500 animate-pulse text-lg">💕</span>
+            <span className="text-pink-500 animate-pulse text-base">💕</span>
           </Link>
 
           {/* Search Bar */}

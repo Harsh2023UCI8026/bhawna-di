@@ -60,7 +60,7 @@ export const PRODUCTS: Product[] = [
     name: "Blushing Rose Pipe-Cleaner Bouquet",
     price: 899,
     originalPrice: 1200,
-    description: "Indulge in everlasting beauty with this handmade pipe-cleaner rose bouquet. Meticulously shaped by hand, these roses will never wither, serving as a permanent symbol of affection. Perfect for birthdays, anniversaries, or just to make Bhawna-di's favorites feel special. Comes in gorgeous pink pastel wrapping with a matching satin bow.",
+    description: "Indulge in everlasting beauty with this handmade pipe-cleaner rose bouquet. Meticulously shaped by hand, these roses will never wither, serving as a permanent symbol of affection. Perfect for birthdays, anniversaries, or just to make Kirtika's favorites feel special. Comes in gorgeous pink pastel wrapping with a matching satin bow.",
     images: [
       "https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=600&q=80",
       "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=600&q=80"

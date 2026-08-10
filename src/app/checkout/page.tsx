@@ -112,7 +112,7 @@ export default function CheckoutPage() {
               </h2>
               
               <p className="text-sm md:text-base font-poppins text-[#4A2C33]/85 leading-relaxed max-w-md mx-auto">
-                Yay, your order is on its way to being made with love! 🌸 Bhawna-di will personally craft your gifts and notify you shortly.
+                Yay, your order is on its way to being made with love! 🌸 Kirtika will personally craft your gifts and notify you shortly.
               </p>
 
               <div className="p-4 bg-[#FFF7FA] border border-[#FDE2EC] rounded-2xl text-xs font-poppins text-[#4A2C33]/70 text-left max-w-sm mx-auto space-y-1.5">
@@ -309,7 +309,7 @@ export default function CheckoutPage() {
                         {/* We use a mock QR code image generated visually */}
                         <div className="w-full h-full bg-[radial-gradient(#4a2c33_2px,transparent_2px)] [background-size:8px_8px] opacity-70 flex flex-col items-center justify-center">
                           <span className="bg-white px-2 py-1 text-[9px] font-bold text-[#D6336C] border border-[#FDE2EC] rounded-lg">
-                            sakaar.art
+                            its.kirkiri
                           </span>
                         </div>
                       </div>
@@ -332,7 +332,7 @@ export default function CheckoutPage() {
                       )}
 
                       <p className="text-[9px] font-poppins text-[#4A2C33]/50 italic">
-                        Note: After scanner payment completes, place order. Bhawna-di will cross-verify with transaction logs.
+                        Note: After scanner payment completes, place order. Kirtika will cross-verify with transaction logs.
                       </p>
                     </motion.div>
                   )}

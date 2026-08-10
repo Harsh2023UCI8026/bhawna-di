@@ -45,7 +45,7 @@ const INITIAL_REVIEWS: Review[] = [
     id: "r1",
     productId: "blushing-rose-bouquet",
     rating: 5,
-    text: "So beautiful and cute! The packaging was perfect, and the roses look so premium. Bhawna-di did an amazing job! 💕",
+    text: "So beautiful and cute! The packaging was perfect, and the roses look so premium. Kirtika did an amazing job! 💕",
     userName: "Riya Sharma",
     date: "2026-08-01"
   },

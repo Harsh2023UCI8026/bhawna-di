@@ -254,7 +254,7 @@ export default function AuthModal({ isOpen, onClose, initialTab = "login" }: Aut
           {/* Logo / Wordmark */}
           <div className="text-center mb-6">
             <h2 className="text-2xl font-quicksand font-bold text-[#D6336C] flex items-center justify-center gap-1.5">
-              sakaar.art <span className="text-sm">💕</span>
+              its.kirkiri <span className="text-sm">💕</span>
             </h2>
             <p className="text-xs font-poppins text-[#4A2C33]/70 mt-1">
               Your sweet corner for handmade goodies
@@ -395,7 +395,7 @@ export default function AuthModal({ isOpen, onClose, initialTab = "login" }: Aut
                     required
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    placeholder="Bhawna Jha"
+                    placeholder="Kirtika"
                     className="w-full pl-10 pr-4 py-2 bg-[#FFF7FA] border border-[#FDE2EC] rounded-2xl text-sm font-poppins text-[#4A2C33] placeholder-[#4A2C33]/40 focus:outline-none"
                   />
                 </div>

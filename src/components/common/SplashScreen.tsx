@@ -81,7 +81,7 @@ export default function SplashScreen() {
               }}
               className="mt-2 text-5xl md:text-6xl font-quicksand font-bold tracking-tight text-[#D6336C] drop-shadow-sm flex items-center justify-center gap-2"
             >
-              sakaar.art
+              its.kirkiri
               <motion.span
                 animate={{ 
                   scale: [1, 1.2, 1],

@@ -111,7 +111,7 @@ export default function CustomOrderPage() {
                     Request Received!
                   </h3>
                   <p className="mt-3 text-xs md:text-sm font-poppins text-[#4A2C33]/85 leading-relaxed">
-                    Your custom request has been saved. Bhawna Jha will review your reference files and call you soon at your contact number!
+                    Your custom request has been saved. Kirtika will review your reference files and call you soon at your contact number!
                   </p>
                   
                   <button
@@ -289,7 +289,7 @@ export default function CustomOrderPage() {
                 Prefer to talk? 📞
               </h3>
               <p className="text-xs font-poppins text-white/90 leading-relaxed">
-                Explain your requirements directly to the designer! Tap the button below to call founder Bhawna Jha.
+                Explain your requirements directly to the designer! Tap the button below to call founder Kirtika.
               </p>
               
               <a
@@ -312,7 +312,7 @@ export default function CustomOrderPage() {
                 </li>
                 <li className="flex gap-2">
                   <span className="font-bold text-[#D6336C] bg-[#FFF7FA] border border-[#FDE2EC] w-5 h-5 rounded-full flex items-center justify-center shrink-0 text-[10px]">2</span>
-                  <span>Bhawna-di reviews the draft design and materials needed.</span>
+                  <span>Kirtika reviews the draft design and materials needed.</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="font-bold text-[#D6336C] bg-[#FFF7FA] border border-[#FDE2EC] w-5 h-5 rounded-full flex items-center justify-center shrink-0 text-[10px]">3</span>

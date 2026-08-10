@@ -59,40 +59,98 @@ export default function HomePage() {
           <div className="absolute top-10 left-10 w-24 h-24 rounded-full bg-[#FDE2EC] blur-2xl opacity-60 animate-pulse" />
           <div className="absolute bottom-10 right-10 w-32 h-32 rounded-full bg-[#F06292]/10 blur-3xl opacity-50" />
 
-          <div className="max-w-7xl mx-auto text-center relative z-10">
+          <div className="max-w-7xl mx-auto text-center relative z-10 flex flex-col items-center">
+            {/* Circular Profile Photo at Starting Top */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              className="relative mb-6 group"
+            >
+              <div className="absolute -inset-1 bg-gradient-to-r from-[#F06292] to-[#D6336C] rounded-full blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
+              <img
+                src="/photo.jpeg"
+                alt="its.kirkiri Profile"
+                className="relative w-28 h-28 sm:w-36 sm:h-36 rounded-full object-cover border-4 border-white shadow-xl"
+              />
+            </motion.div>
+
+            {/* Badge */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-[#FDE2EC] border border-[#F06292]/20 text-[#D6336C] text-xs font-semibold font-poppins mb-6"
+              className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-[#FDE2EC] border border-[#F06292]/20 text-[#D6336C] text-xs font-semibold font-poppins mb-4"
             >
               <Sparkles className="w-3.5 h-3.5 animate-spin-slow" />
               <span>100% Handcrafted with Love</span>
             </motion.div>
 
-            <motion.h2
+            {/* Homepage Heading */}
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="text-4xl md:text-6xl font-quicksand font-bold text-[#4A2C33] tracking-tight leading-tight max-w-3xl mx-auto"
+              className="text-4xl sm:text-5xl md:text-6xl font-quicksand font-bold text-[#4A2C33] tracking-tight leading-tight"
             >
-              Ever-Blooming Flowers & <span className="text-[#D6336C]">Pookie Gifts</span>
-            </motion.h2>
+              its.kirkiri <span className="text-[#D6336C]">💖</span>
+            </motion.h1>
+
+            {/* Bio Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+              className="mt-5 p-5 md:p-6 bg-white/80 backdrop-blur-sm border border-[#FDE2EC] rounded-3xl shadow-sm max-w-lg w-full text-center space-y-2 font-poppins text-xs sm:text-sm text-[#4A2C33]"
+            >
+              <p className="font-semibold text-[#D6336C]">Add a little KIRKIRI in your life 💖</p>
+              <p className="text-[#4A2C33]/80">Mom & daughter behind the magic🪄</p>
+              
+              <div className="flex items-center justify-center gap-3 pt-1">
+                <a
+                  href="https://instagram.com/mamta.t_"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-3 py-1 bg-[#FFF7FA] border border-[#FDE2EC] rounded-full text-[#D6336C] font-semibold hover:bg-[#FDE2EC] transition-all text-xs flex items-center gap-1"
+                >
+                  <span>@mamta.t_</span>
+                </a>
+                <a
+                  href="https://instagram.com/_kirti.t_"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-3 py-1 bg-[#FFF7FA] border border-[#FDE2EC] rounded-full text-[#D6336C] font-semibold hover:bg-[#FDE2EC] transition-all text-xs flex items-center gap-1"
+                >
+                  <span>@_kirti.t_</span>
+                </a>
+                <a
+                  href="https://instagram.com/its.kirkiri"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-3 py-1 bg-[#D6336C] text-white rounded-full font-semibold hover:bg-[#C2185B] transition-all text-xs flex items-center gap-1"
+                >
+                  <span>@its.kirkiri</span>
+                </a>
+              </div>
+
+              <p className="pt-1 text-[#4A2C33]/80">DM for orders & custom creations 💌</p>
+              <p className="font-medium text-[#4A2C33]/90">📍Lucknow based</p>
+            </motion.div>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.6 }}
-              className="mt-6 text-sm md:text-base font-poppins text-[#4A2C33]/70 leading-relaxed max-w-xl mx-auto"
+              transition={{ delay: 0.4, duration: 0.6 }}
+              className="mt-6 text-xs md:text-sm font-poppins text-[#4A2C33]/70 leading-relaxed max-w-xl mx-auto"
             >
-              Explore our handmade pipe-cleaner flower bouquets, custom hampers, cute pouches, and home decor pieces made by Bhawna Jha.
+              Explore our handmade pipe-cleaner flower bouquets, custom hampers, cute pouches, and home decor pieces made by Kirtika.
             </motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-              className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4"
+              transition={{ delay: 0.5, duration: 0.6 }}
+              className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto"
             >
               <a
                 href="#collection"
@@ -199,7 +257,7 @@ export default function HomePage() {
                 Want a custom creation? <Sparkles className="w-4 h-4 text-[#D6336C] animate-pulse" />
               </h3>
               <p className="text-xs md:text-sm font-poppins text-[#4A2C33]/70 max-w-lg">
-                Tell us your colors, ribbons, flowers, or custom gifts. Founder Bhawna-di will personally design and craft them for you!
+                Tell us your colors, ribbons, flowers, or custom gifts. Founder Kirtika will personally design and craft them for you!
               </p>
             </div>
             
