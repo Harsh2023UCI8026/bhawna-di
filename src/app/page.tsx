@@ -54,7 +54,7 @@ export default function HomePage() {
         <Navbar />
 
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-b from-[#FDE2EC]/40 to-[#FFF7FA] py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+        <section className="relative overflow-hidden bg-gradient-to-b from-[#FDE2EC]/40 to-[#FFF7FA] pt-4 pb-10 sm:pt-6 sm:pb-12 md:pt-6 md:pb-14 px-4 sm:px-6 lg:px-8">
           {/* Decorative shapes */}
           <div className="absolute top-10 left-10 w-24 h-24 rounded-full bg-[#FDE2EC] blur-2xl opacity-60 animate-pulse" />
           <div className="absolute bottom-10 right-10 w-32 h-32 rounded-full bg-[#F06292]/10 blur-3xl opacity-50" />
@@ -65,7 +65,7 @@ export default function HomePage() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
-              className="relative mb-6 group"
+              className="relative mb-3 sm:mb-4 group"
             >
               <div className="absolute -inset-1 bg-gradient-to-r from-[#F06292] to-[#D6336C] rounded-full blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
               <img
